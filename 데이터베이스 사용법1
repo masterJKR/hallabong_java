@@ -1,0 +1,50 @@
+SQL - Structured Query Language(구조적 쿼리 언어)
+
+DML, DCL, DDL 세가지가 있다.
+
+
+만들기 쿼리문 - create 
+
+데이터베이스 만들기 - create database 데이터베이스이름;
+table 만들기 - create table 테이블이름 ( 컬럼명 데이터타입 , 컬럼명 데이터타입, 컬럼명 데이터타입);
+
+
+편의점 과자 - 제목
+필드명 : 번호 , 과자명, 가격
+create database test1;
+create table snack( num int , snack_name varchar(50) , cost int);
+
+데이터 저장 쿼리문 - insert into
+insert into 테이블명 (컬럼명, 컬럼명, 컬럼명 ) values(데이터,데이터,데이터);
+
+데이터 조회(검색)
+select * from 테이블명  -> 해당 테이블의 전체 컬럼 선택하여 데이터 조회
+
+
+유저 생성
+create user 아이디 identified by '비밀번호';
+
+권한 부여
+// 모든 데이터베이스의 모든 테이블에 모든 권한을 줌
+grant all privileges on *.* to '사용자'@'%';
+
+// 특정 데이터베이스의 모든 테이블에 모든 권한을 줌
+grant all privileges on DB이름.* to '사용자'@'%';
+
+// 특정 데이터베이스의 특정 테이블에 모든 권한을 줌
+grant all privileges on DB이름.테이블명 to '사용자'@'%';
+
+// 특정 데이터베이스의 특정 테이블에 select 권한을 줌
+grant select on DB이름.테이블명 to '사용자'@'%';
+
+// 특정 데이터베이스의 특정 테이블에 select, insert 권한을 줌
+grant select, insert on DB이름.테이블명 to '사용자'@'%';
+
+// 특정 데이터베이스의 특정 테이블의 컬럼1과 컬럼2의 update 권한을 줌
+grant update(컬럼1, 컬럼2) on DB이름.테이블명 to '사용자'@'%';
+
+유정 계정으로 로그인 방법  - cmd 
+윈도우 로고키 + r   하고   cmd 입력하고 엔터
+mysql 접속 방법 
+mysql -u 계정명 -p    엔터
+비밀번호 입력
