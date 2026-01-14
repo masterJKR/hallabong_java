@@ -1,5 +1,7 @@
 package study20260113;
 
+import java.util.Arrays;
+
 public class Method3 {
 
 	public static void main(String[] args) {
@@ -28,6 +30,15 @@ public class Method3 {
 		UserService us = new UserService();
 		us.findId( users );
 
+		us.findPassword(users);
+		
+		
+		System.out.println( Arrays.toString(users) );
 	}
 
 }
+
+
+
+
+

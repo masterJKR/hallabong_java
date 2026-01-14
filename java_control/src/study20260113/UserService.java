@@ -30,10 +30,61 @@ public class UserService {
 		System.out.print("연락처 입력 : ");
 		String tel = sc.nextLine();
 		
+		boolean isDis = true; 
+		for( User user : users ) {
+			if( user.getId().equals(id) && user.getTel().equals(tel) ) {
+				System.out.print("변경할 비번입력 : " );
+				String pw = sc.nextLine();
+				user.setPassword(pw); 
+				isDis = false;
+				break;
+			}
+		}
+		if(isDis) {
+			System.out.println("일치하는 정보가 없습니다. 다시 입력하세요");
+		}
+		
+	}
+	
+	// 로그인 메서드
+	//  아이디와 비밀번호를입력하여  로그인 하기
+	//  아이디와 비밀번호가 일치하면 "로그인성공" 출력
+	//  일치하지않으면 "아이디 또는 비밀번호가 잘못되었습니다." 출력
+
+	public void login( User[] users ) {
+		System.out.println("==== 로그인 ====");
+		System.out.print("아이디 입력 : ");
+		String id=sc.nextLine();
+		System.out.print("비밀번호 입력 : ");
+		String pw = sc.nextLine();
+		
+		User temp = isID( users, id); // 입력한 아이디와 일치하는 User객체찾기
+		if( temp.getPassword().equals(pw) ) {
+			System.out.println(" 로그인 성공 ");
+		}else {
+			System.out.println("아이디또는 비밀번호가 잘못되었습니다.");
+		}
+		
+//		boolean isLogin = true;
+//		for( User user : users) {
+//			if( user.getId().equals(id) && user.getPassword().equals(pw)) {
+//				System.out.println(" 로그인 성공 ");
+//				isLogin = false;
+//				break;
+//			}
+//		}
+//		if( isLogin ) System.out.println("아이디또는 비밀번호가 잘못되었습니다.");
 		
 	}
 	
 	
+	private User isID( User[] users , String id) {
+		for( User user : users) {
+			if( user.getId().equals(id) ) return user; 
+			// 아이디가 일치하는 User 객체를 반환
+		}
+		return new User();  // 일치하는 아이디가 없다면 null 반환
+	}
 	
 }
 // 데이터 저장 관리하기 위한 클래스에서 

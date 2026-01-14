@@ -34,6 +34,7 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", password=" + password + ", name=" + name + ", tel=" + tel + "]";
 	}
+	public User() {}
 	public User(String id, String password, String name, String tel) {
 		super();
 		this.id = id;
