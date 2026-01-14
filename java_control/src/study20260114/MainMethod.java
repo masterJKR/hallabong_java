@@ -3,8 +3,12 @@ package study20260114;
 public class MainMethod {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		DBConnect connect = new DBConnect();
+		
+		GameMember[] gameMembers = connect.findAll();
+		
+		System.out.println( gameMembers[2] );
 	}
 
 }
