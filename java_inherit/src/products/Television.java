@@ -4,7 +4,8 @@ import common.Appliance;
 
 public class Television  extends Appliance{  // TV
 
-	
+	public int sound;
+	public int ch;
 	
 	
 	@Override
