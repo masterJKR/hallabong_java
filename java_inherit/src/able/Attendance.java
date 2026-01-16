@@ -1,6 +1,7 @@
 package able;
 
-public interface Attendance {
+
+public interface Attendance{
 
 	void checkIn(); //출석
 	void checkOut();  // 퇴실
