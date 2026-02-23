@@ -1,0 +1,108 @@
+
+/* 주문 내역 */
+.order-section h2 {
+  border-bottom: 2px solid #e53935;
+  padding-bottom: 5px;
+}
+
+.order-list {
+  list-style: none;
+  padding: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.order-item * {
+  flex: 1;
+}
+
+.menu-name {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+
+.menu-control {
+  text-align: center;
+}
+
+.menu-control button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #ff7043;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;  
+}
+
+.price{
+  text-align: right;
+}
+
+/* 금액 요약 */
+.summary-section {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.summary-row.total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* 결제 수단 */
+.payment-method-section h2 {
+  margin-top: 25px;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.method {
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.method:hover {
+  border-color: #e53935;
+}
+
+/* 결제 버튼 */
+.pay_button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 20px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.highlighted {
+  background: #e53935;
+  color: #ddd;
+}

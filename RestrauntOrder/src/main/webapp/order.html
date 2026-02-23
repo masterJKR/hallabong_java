@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+<<<<<<< feat/order
+    <title>메뉴 선택 - 맛나분식</title>
+=======
+    <title>결제하기 - 맛나분식</title>
+>>>>>>> dev
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    
+<<<<<<< feat/order
+    <link rel="stylesheet" href="resources/css/default.css">
+    <link rel="stylesheet" href="resources/css/order2.css">
+
+    <!-- JS -->
+    <script src="resources/js/order.js" defer></script>
+</head>
+<body>
+<div id="wrap">
+    
+    <header id="header">
+        <div id="title">
+            <h1>🍜 맛나분식</h1>
+            <p>메뉴 선택하기</p>
+        </div>
+        <nav id="nav">
+            <ul class="menu">
+                <li class="menuItem">
+                    <a href="./index.html">
+                        <span class="material-icons-outlined">
+                            home
+                        </span>
+                    </a>
+                </li>
+                <li class="menuItem">
+                    <a href="./menu.html"> <!-- 여기 수정 -->
+                        <span class="material-icons-outlined">
+                            menu
+                        </span>
+                    </a>
+                </li>
+                <li class="menuItem">
+                    <a href="./order.html">
+                        <span class="material-icons-outlined">
+                            shopping_cart
+                        </span>
+                    </a>
+                </li>
+                <li class="menuItem">
+                    <a href="./payment.html">
+                        <span class="material-icons-outlined">
+                            credit_card
+                        </span>
+                    </a>
+                </li>
+                <li class="menuItem">
+                    <a href="./admin.html">
+                        <span class="material-icons-outlined">
+                            view_list
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+<main id="main">   
+    <div class="menuWrap">
+        <ul class="menuList">
+            
+            <li class="menu">
+                <div class="info" onclick="addItem('원조 매콤 떡볶이', 4500)">
+                    <img src="./resources/img/dduk_01.jpg" alt="원조 매콤 떡볶이">
+                    <p><strong>원조 매콤 떡볶이</strong><br>4,500원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('로제 크림 떡볶이', 6500)">
+                    <img src="./resources/img/dduk_02.jpg" alt="로제 크림 떡볶이">
+                    <p><strong>로제 크림 떡볶이</strong><br>6,500원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('바삭 모둠 튀김', 5500)">
+                    <img src="./resources/img/fried_01.jpg" alt="바삭 모둠 튀김">
+                    <p><strong>바삭 모둠 튀김</strong><br>5,500원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('찰순대 (내장포함)', 4500)">
+                    <img src="./resources/img/sundae_01.jpg" alt="찰순대 (내장포함)">
+                    <p><strong>찰순대 (내장포함)</strong><br>4,500원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('치즈 듬뿍 김밥', 4800)">
+                    <img src="./resources/img/kimbap_01.jpg" alt="치즈 듬뿍 김밥">
+                    <p><strong>치즈 듬뿍 김밥</strong><br>4,800원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('스팸 마요 덮밥', 7500)">
+                    <img src="./resources/img/rice_01.jpg" alt="스팸 마요 덮밥">
+                    <p><strong>스팸 마요 덮밥</strong><br>7,500원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('직화 제육 덮밥', 8000)">
+                    <img src="./resources/img/rice_02.jpg" alt="직화 제육 덮밥">
+                    <p><strong>직화 제육 덮밥</strong><br>8,000원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('진한 사골 떡만둣국', 8000)">
+                    <img src="./resources/img/noodle_02.jpg" alt="진한 사골 떡만둣국">
+                    <p><strong>진한 사골 떡만둣국</strong><br>8,000원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('우삼겹 비빔국수', 8500)">
+                    <img src="./resources/img/noodle_01.jpg" alt="우삼겹 비빔국수">
+                    <p><strong>우삼겹 비빔국수</strong><br>8,500원</p>
+                </div>
+            </li>
+
+            <li class="menu">
+                <div class="info" onclick="addItem('어묵 듬뿍 우동', 6000)">
+                    <img src="./resources/img/noodle_03.jpg" alt="어묵 듬뿍 우동">
+                    <p><strong>어묵 듬뿍 우동</strong><br>6,000원</p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="cartSection">
+        <h3>장바구니</h3>
+        <div id="cartList"></div>
+        <p id="totalPrice">총 금액: 0원</p>
+        <button id="orderBtn" onclick="goToPayment()">주문하기</button>
+    </div>
+
+    <footer id="footer">
+        <div class="footerBox">
+            <div class="footerText"><p>대표이사 : 김맛나</p></div>
+=======
+    <link rel="stylesheet" href="./default.css">
+    
+
+    <script src="./Order.js"></script>
+    <link rel="stylesheet" href="./Order.css">
+    <link rel="stylesheet" href="./Order2.css">
+</head>
+<body>
+
+    <div id="wrap">
+
+    <!-- 헤더 -->
+        <header id="header">
+            <div id="title">
+                <h1>🍜 맛나분식</h1>
+                <p>주문 확인 및 결제</p>
+            </div>
+            <nav id="nav">
+                <ul class="menu">
+                    <li class="menuItem">
+                        <a href="./index.html">
+                            <span class="material-icons-outlined">
+                                home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./menu.html">
+                            <span class="material-icons-outlined">
+                                menu
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="">
+                            <span class="material-icons-outlined">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./payment.html">
+                            <span class="material-icons-outlined">
+                                credit_card
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="">
+                            <span class="material-icons-outlined">
+                                view_list
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+   <main id="main">   
+        <div id="menuScreen">
+            <div class="menu-buttons">
+                <button onclick="addItem('떡볶이', 3500)">떡볶이 3,500원</button>
+                <button onclick="addItem('순대', 4000)">순대 4,000원</button>
+                <button onclick="addItem('김밥', 2500)">김밥 2,500원</button>
+                <button onclick=""
+            </div>
+
+            <h3>장바구니</h3>
+            <div id="cartList"></div>
+            <p id="totalPrice">총 금액: 0원</p>
+
+            <button onclick="goToPayment()">주문하기</button>
+        </div>
+    </main> 
+
+    <footer id="footer">
+        <div class="footerBox">
+            <div class="footerText"><p>대표이사 : 김맛나    </p></div>
+>>>>>>> dev
+            <div class="footerText"><p>matnasnack@matna.com</p></div>
+            <div class="footerText"><p>Matna Company ⓒ All right Reserved.</p></div>
+        </div>
+    </footer>
+<<<<<<< feat/order
+</div>
+</body>
+</html>
+=======
+
+</body>
+</html>
+
+>>>>>>> dev

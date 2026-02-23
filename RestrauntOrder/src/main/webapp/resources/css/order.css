@@ -1,0 +1,132 @@
+
+    /* 공통 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff3f3;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrap {
+    /* max-width: 1200px; */
+    width: 1200px;
+    min-height: 100vh;
+    /* padding: 20px; */
+}
+
+/* 헤더 */
+#header {
+    width: 1160px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+#header p {
+    font-size: 16px;
+    color: #777;
+}
+
+#title {
+    width:auto;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#title h1 {
+    color: #e53935;
+    margin: 0;
+    font-size: 35px;    
+}
+
+#nav {
+    
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#nav .menu {
+    width: 100%;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: center;
+    gap: 10px;
+}
+
+#nav .menu .menuItem {
+    flex-shrink: 1;
+    background: #f18684;
+    border-radius: 3px;
+    width: 80px;
+}
+
+#nav .menu .menuItem a {
+    text-align: center;
+}
+
+
+#nav .menu .menuItem a span {
+    font-size: 35px;
+    padding: 20px 10px;
+    transition:all 0.7s;
+    color:#eee;
+    margin: 0 5px;
+    display: block;
+}
+
+#nav .menu .menuItem a span:hover {
+    background: none;
+    /* border: 1px solid #e53935; */
+    color:#f18684;
+}
+
+
+/* 메인 */
+#main {
+    max-width: 1160px;
+    margin: 0 auto 50px;
+    padding-bottom: 80px;
+}
+
+
+/* 페이지 하단 */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: #e53935;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+.footerBox {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

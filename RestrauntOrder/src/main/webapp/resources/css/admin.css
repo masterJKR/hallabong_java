@@ -1,0 +1,141 @@
+.adminMenu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.adminBtn {
+    background: #eee;
+    border: 2px solid #f18684;
+    border-radius: 15px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.adminBtn:hover {
+    background: #f18684;
+    color: white;
+}
+
+.adminBtn span {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.highlighted {
+    background: #f18684;
+    color: white;
+}
+
+/* 결과창 */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 8px 5px;
+    text-align: center;
+    font-size: 14px;
+    word-break: break-all;
+    height: 60px;
+}
+
+.admin-table th {
+    background-color: rgba(241, 134, 132, 0.2);
+}
+
+/* 열마다 적절한 비율 할당 */
+.orders th:nth-child(1) { width: 80px; }  /* 주문번호 */
+.orders th:nth-child(2) { width: auto; }  /* 주문내역 (가장 넓게) */
+.orders th:nth-child(3) { width: 120px; } /* 총 금액 */
+.orders th:nth-child(4) { width: 100px; } /* 상태 */
+.orders th:nth-child(5) { width: 150px; } /* 주문시간 */
+.text-left { text-align: left !important; }
+
+/* 메뉴 테이블 비율 */
+img {
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menus th:nth-child(1) { width: 80px; }
+.menus th:nth-child(2) { width: 200px; }
+.menus th:nth-child(3) { width: 150px; }
+.menus th:nth-child(4) { width: 150px; }
+.menus th:nth-child(5) { width: auto; }
+
+
+/* 상태별 색상 표시 */
+.status-결제완료 { color: blue; font-weight: bold; }
+.status-주문취소 { color: red; font-weight: bold;}
+.status-배달완료 { color: green; }
+
+
+/* hidden */
+
+.hidden {
+    display: none;
+}
+
+/* 모달 */
+#modalWrap { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 1000; 
+}
+
+#modalBack { 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.6); 
+    position: fixed; 
+}
+
+#modalContent { 
+    width: 450px; 
+    background: #fff; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    border-radius: 20px; 
+    padding: 30px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.close { 
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+    cursor: pointer; 
+    color: #999; 
+}
+
+.close span { 
+    font-size: 30px; 
+    cursor: pointer; 
+}
+
+.content {
+    width: 100%;
+}
+
+.content p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}

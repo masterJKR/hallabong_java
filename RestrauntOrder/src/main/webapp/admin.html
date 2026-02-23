@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맛나분식</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="./resources/css/default.css">
+    <link rel="stylesheet" href="./resources/css/admin.css">
+
+    <script src="./resources/js/common.js"></script>
+
+    <script src="./resources/js/admin_data.js"></script>
+    <script src="./resources/js/admin_ui.js"></script>
+    <script src="./resources/js/admin_main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="title">
+                <h1>🍜 맛나분식</h1>
+                <p>관리 페이지</p>
+            </div>
+            <nav id="nav">
+                <ul class="menu">
+                    <li class="menuItem">
+                        <a href="./index.html">
+                            <span class="material-icons-outlined">
+                                home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./menu.html">
+                            <span class="material-icons-outlined">
+                                menu
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./order.html">
+                            <span class="material-icons-outlined">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./payment.html">
+                            <span class="material-icons-outlined">
+                                credit_card
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./admin.html">
+                            <span class="material-icons-outlined">
+                                view_list
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <div class="adminMenu">
+                <button class="adminBtn category" id="viewOrder">
+                    <span class="material-icons-outlined">
+                        bar_chart
+                    </span>
+                    <p>매출 조회</p>
+                </button>
+                <button class="adminBtn category" id="manage">
+                    <span class="material-icons-outlined">
+                        restaurant_menu
+                    </span>
+                    <p>메뉴 관리</p>
+                </button>
+                <button class="adminBtn category hidden" id="addMenu">
+                    <span class="material-icons-outlined">
+                        add_circle_outline
+                    </span>
+                    <p>메뉴 추가</p>
+                </button>
+                <button class="adminBtn category hidden" id="updateMenu">
+                    <span class="material-icons-outlined">
+                        edit_note
+                    </span>
+                    <p>메뉴 수정</p>
+                </button>
+                <button class="adminBtn category hidden" id="deleteMenu">
+                    <span class="material-icons-outlined">
+                        delete_outline
+                    </span>
+                    <p>메뉴 삭제</p>
+                </button>
+            </div>
+
+            <div class="adminContent"></div>
+            <div id="modalWrap" class="hidden">
+                <div id="modalBack"></div>
+                <div id="modalContent">
+                    <div class="close"><span class="material-icons-outlined">close</span></div>
+                    <div class="content"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer id="footer">
+        <div class="footerBox">
+            <div class="footerText"><p>대표이사 : 김맛나    </p></div>
+            <div class="footerText"><p>matnasnack@matna.com</p></div>
+            <div class="footerText"><p>Matna Company ⓒ All right Reserved.</p></div>
+        </div>
+    </footer>
+</body>
+</html>

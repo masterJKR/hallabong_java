@@ -1,0 +1,72 @@
+#joinWrap{
+    width:450px;
+    margin:100px auto;
+}
+.title{ 
+    text-align: center;
+    margin-bottom:20px;
+}
+.required, .choice{
+    padding:15px;
+    border-radius: 5px;
+    margin-bottom:20px;
+}
+
+.input-field{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    margin-bottom:10px;
+}
+.input-field label{
+    width:100px;
+    text-align: right;
+}
+.input-field input{
+    flex:1;
+    border:0;
+    border-bottom:2px solid #999;
+}
+
+.checkList{
+    margin:10px 0;
+    display: flex;
+    flex-wrap:wrap;
+}
+/* 기본 체크박스를 다른 모양으로 대체 
+    1. 체크박스를 화면에서 표시안하기
+*/
+.checkli input[type="checkbox"]{
+    display:none;
+}
+/* 기존 체크박스대신 표현할 모양 만들기 */
+.checkli label{
+    display:inline-block;
+    border:2px solid #aaa;
+    padding:12px 18px;
+    border-radius: 12px;
+    margin:4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* 3.label을 클릭하면 checkbox가 체크된다.
+  체크 되었다는 표시를위해  label의 색을
+  변경 되게 한다.  */
+.checkli input[type="checkbox"]:checked + label{
+    background: darkcyan;
+    color:white;
+}
+
+.joinButton{
+    text-align: center;
+}
+#joinBt{
+    border: 0;
+    background: seagreen;
+    color:antiquewhite;
+    width:300px;
+    padding:10px 0;
+    font-size:25px;
+    border-radius: 10px;
+}

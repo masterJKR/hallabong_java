@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU - 맛나분식</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/default.css">
+    <link rel="stylesheet" href="./resources/css/menu.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="title">
+                <h1>🍜 맛나분식</h1>
+                <p>맛있는 상상, 즐거운 선택!</p>
+            </div>
+            <nav id="nav">
+                <ul class="menu">
+                    <li class="menuItem"><a href="./index.html"><span class="material-icons-outlined">home</span></a></li>
+                    <li class="menuItem"><a href="./menu.html"><span class="material-icons-outlined">menu</span></a></li>
+                    <li class="menuItem"><a href="./cart.html"><span class="material-icons-outlined">shopping_cart</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <div class="categoryWrap">
+                <ul class="categoryList">
+                    <li class="category highlighted" data-category="분식"><p>분식</p></li>
+                    <li class="category" data-category="식사"><p>식사</p></li>
+                    <li class="category" data-category="면류"><p>면류</p></li>
+                </ul>
+            </div>
+
+            <div class="menuWrap">
+                <ul class="menuList"></ul>
+            </div>
+
+            <div id="modalWrap" class="hide">
+                <div id="modalBack"></div>
+                <div id="modalContent">
+                    <div class="close"><span class="material-icons-outlined">close</span></div>
+                    <div class="content">
+                        <h3 class="menuName"></h3>
+                        <div class="modalBody">
+                            <img src="" alt="" class="modalImg">
+                            <div class="order-interface">
+                                <div class="quantity-control">
+                                    <button type="button" class="btn-minus">-</button>
+                                    <input type="number" id="menuQuantity" value="1" readonly>
+                                    <button type="button" class="btn-plus">+</button>
+                                </div>
+                                <p class="totalPriceText">총 금액: 0원</p>
+                                <button id="addToCartBtn">장바구니 담기 🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="toast">
+        <span class="material-icons-outlined">celebration</span>
+        <span id="toastMsg">장바구니에 담겼어요!</span>
+    </div>
+
+    <script src="./resources/js/menu_data.js"></script>
+    <script src="./resources/js/menu.js"></script>
+</body>
+</html>

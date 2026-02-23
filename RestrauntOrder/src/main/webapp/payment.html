@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>결제하기 - 맛나분식</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./resources/css/default.css">
+    <link rel="stylesheet" href="./resources/css/payment.css">
+
+    
+    <script>
+        const cart = [
+            {id : 1, menuName : "원조 매콤 떡볶이", amount : 1, price : 4500},
+            {id : 2, menuName : "로제 크림 떡볶이", amount : 1, price : 6500},
+            {id : 3, menuName : "찰순대(내장포함)", amount : 1, price : 4500}
+        ]
+    </script>
+    <script src="./resources/js/common.js"></script>
+    <script src="./resources/js/payment.js"></script>
+
+   
+</head>
+<body>
+
+    <div id="wrap">
+
+    <!-- 헤더 -->
+        <header id="header">
+            <div id="title">
+                <h1>🍜 맛나분식</h1>
+                <p>주문 확인 및 결제</p>
+            </div>
+            <nav id="nav">
+                <ul class="menu">
+                    <li class="menuItem">
+                        <a href="./index.html">
+                            <span class="material-icons-outlined">
+                                home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./menu.html">
+                            <span class="material-icons-outlined">
+                                menu
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./order.html">
+                            <span class="material-icons-outlined">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./payment.html">
+                            <span class="material-icons-outlined">
+                                credit_card
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="./admin.html">
+                            <span class="material-icons-outlined">
+                                view_list
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+
+        <!-- 주문 내역 -->
+        <main id="main">
+            <section class="order-section">
+                <h2>주문 내역</h2>
+    
+                <ul class="order-list">
+                    <li class="order-item">
+                        <div id="orderList"></div>
+                    </li>
+    
+                    <li class="order-item">
+                        <span class="menu-name">순대</span>
+                        <div class="menu-control">
+                            
+                            <span class="count">0</span>
+                            
+                        </div>
+                        <span class="price">0원</span>
+                    </li>
+    
+                    <li class="order-item">
+                        <span class="menu-name">김밥</span>
+                        <div class="menu-control">
+                            <button class="minus">-</button>
+                            <span class="count">0</span>
+                            <button class="plus">+</button>
+                        </div>
+                        <span class="price">0원</span>
+                    </li>
+
+                    <li class="order-item">
+                        <span class="menu-name">라면</span>
+                        <div class="menu-control">
+                            <button class="minus">-</button>
+                            <span class="count">0</span>
+                            <button class="plus">+</button>
+                        </div>
+                        <span class="price">0원</span>
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- 금액 요약 -->
+            <section class="summary-section">
+                <div class="summary-row">
+                    <span>주문금액</span>
+                    <span id="order-total">0원</span>
+                </div>
+                <div class="summary-row">
+                    <span>할인금액</span>
+                    <span id="discount">-0원</span>
+                </div>
+                <div class="summary-row total">
+                    <span>결제금액</span>
+                    <span id="final-total">0원</span>
+                </div>
+            </section>
+    
+            <!-- 결제 수단 -->
+            <section class="payment-method-section">
+                <h2>결제 수단</h2>
+                <div class="payment-methods">
+                    <button class="method category">💳 카드결제</button>
+                    <button class="method category">💵 현금결제</button>
+                    <button class="method category">📱 QR결제</button>
+                    <button class="method category">⭐ 간편결제</button>
+                </div>
+            </section>
+    
+            <!-- 결제 버튼 -->
+            <button class="pay_button" onclick="pay()">
+                결제하기
+            </button>
+        </main>
+
+
+    </div>
+    
+    
+    <footer id="footer">
+        <div class="footerBox">
+            <div class="footerText"><p>대표이사 : 김맛나    </p></div>
+            <div class="footerText"><p>matnasnack@matna.com</p></div>
+            <div class="footerText"><p>Matna Company ⓒ All right Reserved.</p></div>
+        </div>
+    </footer>
+
+</body>
+</html>

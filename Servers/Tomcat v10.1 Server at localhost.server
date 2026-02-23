@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v10.1 Server at localhost-config" deployDir="C:\Users\cloud\Downloads\apache-tomcat-10.1.52\apache-tomcat-10.1.52\webapps" hostname="localhost" id="Tomcat v10.1 Server at localhost" name="Tomcat v10.1 Server at localhost" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="false" timestamp="7">
+  <list key="modules" value0="testWeb::org.eclipse.jst.jee.server:testWeb::jst.web::5.0" value1="jsptest::org.eclipse.jst.jee.server:jsptest::jst.web::6.0"/>
+</server>

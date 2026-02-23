@@ -1,0 +1,54 @@
+
+
+
+#header p {
+    opacity: 0;
+}
+
+
+.startBoxWrap{
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startBoxWrap {
+
+    isolation: isolate;
+    background: url("../img/dduk_01.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.startBoxWrap::before {
+    content: '';
+    position: absolute;
+    background: #fff3f3;
+    z-index: -1;
+    inset: 0;
+    opacity: 50%;
+}
+
+.startBox {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+}
+
+.startButton {
+    border: 0;
+    background: #e53935;
+    color : #fff3f3;
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+.startButton p {
+    font-size: 50px;
+    padding: 20px;
+}
